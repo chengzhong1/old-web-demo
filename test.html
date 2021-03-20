@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">{{msg}}
+        <button-counter></button-counter>
+        <hello-world></hello-world>
+        <div>{{pmsg}}</div>
+        <menu-item :pstr='pstr'></menu-item>
+    </div>
+</body>
+<script>
+    Vue.component('button-counter', {
+        data: function() {
+            return {
+                count: 0
+            }
+        },
+        template: '<button @click="count++">点击{{count}}次</button>'
+    })
+    Vue.component('menu-item', {
+        props: ['pstr'],
+        template: `
+        <div> 
+        <div>{{pstr}}</div>
+        </div>`
+    })
+    var HelloWorld = {
+        data: function() {
+            return {
+                msg: "HelloWorld"
+            }
+        },
+        template: '<div>{{msg}}</div>'
+    };
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            msg: 'hello',
+            pmsg: '父组件里面的内容',
+            pstr: 'hello'
+        },
+        components: {
+            'hello-world': HelloWorld,
+        }
+    })
+</script>
+
+</html>

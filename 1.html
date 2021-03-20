@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <div>bvkfbvj\nvuvb</div>
+    <script>
+        // var str = 'i miss you!!';
+        // //切割字符串
+        // var arr = str.split(' ');
+        // console.log(arr);
+        // for (var i = 0; i < arr.length; i++) {
+        //     //将首字母大写 拼接后面没有首字母的部分
+        //     arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+        // }
+        // //将数组转为字符串
+        var content = "链接：https://pan.baidu.com/s/14Ohd4jLuMWLRtqIt6eUNKg\n提取码：5dlw\n复制这段内容后打开百度网盘手机App，操作更方便哦";
+
+        var reg = /链接：(.*)/;
+
+        // https://pan.baidu.com/s/14Ohd4jLuMWLRtqIt6eUNKg
+        console.log(reg.exec(content)[1].trim());
+
+        var reg1 = /提取码：(.*)/;
+
+        // 5dlw
+        console.log(reg1.exec(content)[1].trim());
+        console.log(content);
+    </script>
+</body>
+
+</html>

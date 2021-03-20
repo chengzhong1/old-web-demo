@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+
+    <a href="http://www.itcast.cn" title="都挺好">vuXHVC</a>
+    <input type="checkbox" name="" id="" checked>
+    <div index="1">index</div>
+
+    <script>
+        $(function() {
+            console.log($("a").prop("href"));
+            $("a").prop("title", "我们");
+            $("input").change(function() {
+                console.log($(this).prop("checked"));
+            })
+            console.log($("div").attr("index"));
+        })
+    </script>
+</body>
+
+</html>

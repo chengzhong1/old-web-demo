@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header,
+        section,
+        nav {
+            width: 100px;
+            height: 120px;
+            background: pink;
+            margin: 10px;
+        }
+        
+        video {
+            width: 300px;
+            height: 150px;
+            margin: 10px;
+        }
+        
+        button {
+            cursor: pointer;
+        }
+        /* 交际选择器 */
+        button[disabled] {
+            cursor: default;
+        }
+    </style>
+</head>
+
+<body>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button disabled>按钮</button>
+    <button disabled>按钮</button>
+    <header>header</header>
+    <nav>nav</nav>
+    <section>section</section>
+    <video src="mi.mp4" controls autoplay muted></video>
+    <audio src="snow.mp3" controls="controls" autoplay="autoplay"></audio>
+    <form action="">
+        <input type="text" name="username" autocomplete="off"> 邮箱：
+        <input type="email" name="username"> 搜索框:
+        <input type="search" autofocus> 颜色：
+        <input type="color">
+        <input type="file">
+        <input type="submit" value="提交">
+
+    </form>
+</body>
+
+</html>
